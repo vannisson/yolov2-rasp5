@@ -1,0 +1,22 @@
+[name]
+model_name=gesture
+
+[train-configure]
+epochs=300
+steps=150,250
+batch_size=128
+subdivisions=1
+learning_rate=0.001
+
+[model-configure]
+pre_weights=./modelzoo/test.pth
+classes=5
+width=352
+height=352
+anchor_num=3
+anchors=181.91,267.48, 232.36,300.50, 234.42,251.10, 283.00,218.86, 311.91,309.64, 322.22,262.34
+
+[data-configure]
+train=./data/train.txt
+val=./data/val.txt
+names=./data/gesture.names
